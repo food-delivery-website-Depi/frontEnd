@@ -5,7 +5,7 @@ import { assets } from "../../assets/food del assets/frontend_assets/assets";
 import PropTypes from "prop-types";
 
 const Navbar = ({ setShowLogin }) => {
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState("home");
   return (
     <div className="navbar">
       <img src={assets.logo} alt="" className="logo" />
@@ -17,25 +17,35 @@ const Navbar = ({ setShowLogin }) => {
         >
           Home
         </Link>
-        <a
-          href="#explore-menu"
+
+        <Link
+          to="/menu"
           onClick={() => setMenu("menu")}
           className={menu === "menu" ? "active" : ""}
-        ></a>
-        <a
-          href="#app-download"
+        >
+          Menu
+        </Link>
+
+        
+
+        <Link
+          href="mobile-app"
           onClick={() => setMenu("mobile-app")}
           className={menu === "mobile-app" ? "active" : ""}
         >
-          mobile
-        </a>
-        <a
-          href="#footer"
+          Mobile App
+        </Link>
+
+
+        <Link
+          href="contact-us"
           onClick={() => setMenu("contact-us")}
           className={menu === "contact-us" ? "active" : ""}
         >
-          contact us
-        </a>
+          Contact Us
+        </Link>
+
+
       </ul>
       <div className="navbar-right">
         <img src={assets.search_icon} alt="" />
