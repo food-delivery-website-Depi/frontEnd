@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
       {/* Show Login Popup if showLogin is true */}
-      {showLogin && <LoginPopup />}
+      {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
 
       <div className="app">
         {/* Wrap the entire app in Router */}
