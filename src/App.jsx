@@ -18,14 +18,14 @@ const App = () => {
 
       <div className="app">
         {/* Wrap the entire app in Router */}
-        <Router>
-          <Navbar setShowLogin={setShowLogin} />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/order" element={<PlaceOrder />} />
-          </Routes>
-        </Router>
+
+        <Navbar setShowLogin={setShowLogin} />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/order" element={<PlaceOrder />} />
+        </Routes>
       </div>
     </>
   );
