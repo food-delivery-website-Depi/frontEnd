@@ -1,9 +1,9 @@
 import React from "react";
-import "./ExoloreMenue.css";
+import "./ExploreMenu.css";
 import { menu_list } from "../../assets/food del assets/frontend_assets/assets";
 
 
-const ExoloreMenue = ({category, setCategory}) => {
+const ExploreMenu = ({category, setCategory}) => {
   return (
     <div className="explore-menu" id="explore-menu">
       <h1>Explore our menu</h1>
@@ -28,4 +28,4 @@ const ExoloreMenue = ({category, setCategory}) => {
   );
 };
 
-export default ExoloreMenue;
+export default ExploreMenu;
