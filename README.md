@@ -2,6 +2,9 @@
 
 A modern and responsive food delivery web application built with React.js. This project provides a seamless user experience for ordering food online, with a sleek user interface and intuitive navigation.
 
+![image](https://github.com/user-attachments/assets/8b66906e-845c-4221-a99d-7a42faa3c934)
+
+
 ## Features
 - Browse Menu: Users can view different categories of food items.
 - Search Functionality: Easily search for your favorite meals.
