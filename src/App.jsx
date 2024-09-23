@@ -6,6 +6,7 @@ import Home from "./Pages/Home/Home";
 import Cart from "./Pages/Cart/Cart";
 import PlaceOrder from "./Pages/PlaceOrder/PlaceOrder";
 import LoginPopup from "./components/LoginPopup/LoginPopup";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   // create one state variable
@@ -13,20 +14,16 @@ const App = () => {
 
   return (
     <>
-      {/* Show Login Popup if showLogin is true */}
       {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
-
       <div className="app">
-        {/* Wrap the entire app in Router */}
-
         <Navbar setShowLogin={setShowLogin} />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
         </Routes>
       </div>
+      <Footer />
     </>
   );
 };
