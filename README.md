@@ -1,4 +1,4 @@
-# Food Delivery Website
+# Food Delivery Client Side
 
 A modern and responsive food delivery web application built with React.js. This project provides a seamless user experience for ordering food online, with a sleek user interface and intuitive navigation.
 
