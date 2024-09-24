@@ -1,21 +1,19 @@
-import React from "react";
-import "./Header.css";
-
+/* eslint-disable no-unused-vars */
+import React from 'react'
+import './header.css'
 const Header = () => {
   return (
     <div className="header">
-      <dive className="header-contents"> 
+      <div className="header-content">
         <h2>Order your favourite food here</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae unde
-          praesentium tempore autem, aliquam tenetur similique neque eveniet
-          cupiditate nobis excepturi ut facilis eaque dolor dignissimos,
-          distinctio quod quas at!
-        </p>
+          Get your favourite food delivered to your doorsteps Get your favourite
+          Get your favourite food delivered to your doorsteps food delivered to
+          your doorsteps Get your favourite food delivered to your doorsteps</p>
         <button>View Menu</button>
-      </dive>
+      </div>
     </div>
   );
-};
+}
 
-export default Header;
+export default Header

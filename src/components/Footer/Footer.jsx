@@ -1,53 +1,47 @@
-import React from "react";
-import "./Footer.css";
-import { assets } from "../../assets/food del assets/frontend_assets/assets";
-import { useNavigate } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
+import React from 'react'
+import './footer.css'
+import { assets } from '../../assets/frontend_assets/assets'
+
 const Footer = () => {
-  const navigate = useNavigate();
   return (
-    <footer id="footer">
+    <div className="footer" id="footer">
       <div className="footer-content">
         <div className="footer-content-left">
-          <img src={assets.logo} alt="logo" />
+          <img src={assets.logo} alt="" />
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit
-            ratione fugiat vitae quisquam dolores sint id, nisi veniam
-            repellendus. Tempore, expedita. At praesentium deserunt minima!
-            Porro iste beatae maxime voluptatem?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam a
+            nobis eveniet eius enim
           </p>
           <div className="footer-social-icons">
-            <a href="https://www.facebook.com" target="_blank">
-              <img src={assets.facebook_icon} alt="facebook" />
-            </a>
-            <a href="https://www.twitter.com" target="_blank">
-              <img src={assets.twitter_icon} alt="twitter" />
-            </a>
-            <a href="https://www.linkedin.com" target="_blank">
-              <img src={assets.linkedin_icon} alt="linkedin" />
-            </a>
+            <img src={assets.facebook_icon} alt="" />
+            <img src={assets.twitter_icon} alt="" />
+            <img src={assets.linkedin_icon} alt="" />
           </div>
         </div>
         <div className="footer-content-center">
           <h2>COMPANY</h2>
           <ul>
-            <li onClick={() => navigate("/")}>Home</li>
-            <li>About Us</li>
+            <li>Home</li>
+            <li>About us</li>
             <li>Delivery</li>
-            <li>Privacy Policy</li>
+            <li>Privacy policy</li>
           </ul>
         </div>
         <div className="footer-content-right">
           <h2>GET IN TOUCH</h2>
           <ul>
-            <li>+1-123-456-7890</li>
+            <li>+123 456 789</li>
             <li>contact@tomato.com</li>
           </ul>
         </div>
       </div>
       <hr />
-      <p className="footer-copyright">Copyright 2024 © Tomato.com</p>
-    </footer>
+      <p className="footer-copyright">
+        Copyright @ 2024 Tomato.com - All Right Reserved.
+      </p>
+    </div>
   );
-};
+}
 
-export default Footer;
+export default Footer
