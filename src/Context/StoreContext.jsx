@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+// eslint-disable-next-line no-unused-vars
 import { createContext, useEffect, useState } from "react";
 import { food_list } from "../assets/frontend_assets/assets";
 
@@ -20,9 +21,25 @@ const StoreContextProvider = (props) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
 
-  useEffect(() => {
-    console.log(cartItems);
-  }, [cartItems]);
+  const getTotalCartAmount = () => {
+    let totalAmount = 0;
+
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        let itemInfo = food_list.find((product) => product._id === item);
+        if (itemInfo) {
+          totalAmount += itemInfo.price * cartItems[item];
+        } else {
+          totalAmount = 0;
+        }
+      }
+    }
+
+    // Now that totalAmount is fully calculated, we log it
+    console.log("Total Cart Amount:", totalAmount);
+
+    return totalAmount;
+  };
 
   const contextValue = {
     food_list,
@@ -30,6 +47,7 @@ const StoreContextProvider = (props) => {
     setCartItems,
     addToCart,
     removeFromCart,
+    getTotalCartAmount,
   };
 
   return (
