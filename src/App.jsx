@@ -1,29 +1,23 @@
-<<<<<<< HEAD
 import  { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-=======
 /* eslint-disable no-unused-vars */
 import React from "react";
->>>>>>> 725527aac8599734087af87a7cc46e508aa4856f
 import Navbar from "./components/Navbar/Navbar";
-import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import Cart from "./pages/Cart/Cart";
+import Cart from "./Pages/Cart/Cart";
 import PlaceOrder from "./pages/placeOrder/PlaceOrder";
 import Footer from "./components/Footer/Footer";
-
+import Home from "./Pages/Home/Home";
+import LoginPopup from "./components/LoginPopup/LoginPopup";
 const App = () => {
+  const [showLogin, setShowLogin] = useState(false);
+
   return (
     <>
-<<<<<<< HEAD
-      {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <></>}
+      {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
 
       <div className="app">
         <Navbar setShowLogin={setShowLogin} />
-=======
-      <div className="app">
-        <Navbar />
->>>>>>> 725527aac8599734087af87a7cc46e508aa4856f
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
