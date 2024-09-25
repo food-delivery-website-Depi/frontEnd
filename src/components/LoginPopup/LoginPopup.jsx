@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./LoginPopup.css";
-import { assets } from "../../assets/food del assets/frontend_assets/assets";
+import "./loginPopup.css";
+import { assets } from "../../assets/frontend_assets/assets";
 import PropTypes from "prop-types";
 
 const LoginPopup = ({ setShowLogin }) => {
